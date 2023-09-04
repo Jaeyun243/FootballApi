@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL FOOTBALL</title>
+
+    <!-- Enlace al archivo CSS de Bootstrap -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Referencia al archivo jQuery -->
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    <!-- Referencia al archivo JavaScript de Bootstrap -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-black">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "Home")" class="nav-link text-light">
+                            <img src="~/Content/Imagenes/inicio.jpg" alt="Inicio" style="width: 100px; height: auto;" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - ALL FOOTBALL</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

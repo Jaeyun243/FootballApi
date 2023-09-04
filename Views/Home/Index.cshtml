@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/wwwroot/css/site.css" />
+    <title>ALL FOOTBALL</title>
+
+    <!-- Enlace al archivo CSS de Bootstrap -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Referencia al archivo jQuery -->
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    <!-- Referencia al archivo JavaScript de Bootstrap -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="bg-success">
+    <!-- Agregamos la clase "bg-success" para el fondo verde -->
+
+    <main class="bg-success">
+        <section class="row" aria-labelledby="aspnetTitle">
+            <h1 id="title">ALL FOOTBALL</h1>
+            <p class="lead"> La mejor pagina para ver estadisticas, resultados, predicciones y jugadores destacados de tus equipos favoritos</p>
+            <a href="@Url.Action("Predicciones", "Home")" class="btn btn-dark text-white">Predicciones</a>
+        </section>
+
+        <div class="row">
+            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+                <h2  id="gettingStartedTitle" class= "font-weight-bold" >Estadisticas de equipo</h2>
+                <img src="~/Content/Imagenes/estadisticas.jpg" alt="Estadisticas" style="max-width: 100%;" />
+                <p class="text-bg-dark font-weight-bold">
+                    Estadisticas correspondientes a los partidos.
+                </p class="font-weight-bold">
+                <div class="text-center">
+                    <!-- Agregamos la clase "text-center" para centrar horizontalmente -->
+                    <a href="@Url.Action("About", "Home")" class="btn btn-dark text-white">View</a>
+                </div>
+            </section>
+            <section class="col-md-4" aria-labelledby="librariesTitle">
+                <h2 id="librariesTitle">Resultados de Partido</h2>
+                <img src="~/Content/Imagenes/resultados.png" alt="result" style="max-width: 100%;" />
+                <p class="text-bg-dark font-weight-bold">
+                    Resultados de partidos importantes.
+                </p>
+                <div class="text-center">
+                    <!-- Agregamos la clase "text-center" para centrar horizontalmente -->
+                    <a href="@Url.Action("Contact", "Home")" class="btn btn-dark text-white">View</a>
+                </div>
+            </section>
+            <section class="col-md-4" aria-labelledby="hostingTitle">
+                <h2 id="hostingTitle">Best Players</h2>
+                <img src="~/Content/Imagenes/destacado.jpg" alt="result" style="max-width: 100%;" />
+                <p class="text-bg-dark font-weight-bold">
+                    Mejores jugdores.
+                </p>
+                <div class="text-center">
+                    <!-- Agregamos la clase "text-center" para centrar horizontalmente -->
+                    <a href="@Url.Action("Destacado", "Home")" class="btn btn-dark text-white">View</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Tu contenido adicional va aquí -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+</html>
+
+

@@ -1,0 +1,20 @@
+﻿body {
+    /* Estilos para el cuerpo de la página si es necesario */
+}
+
+/* Estilo personalizado para el botón */
+.btn-custom {
+    background-color: black; /* Cambiamos el fondo a negro */
+    color: white; /* Color de texto blanco */
+    text-align: center; /* Centrar el texto horizontalmente */
+    display: inline-block; /* Cambiamos a inline-block para que se ajuste al contenido */
+    padding: 20px 20px; /* Añadimos relleno para el botón */
+    border: none; /* Quitamos el borde */
+    cursor: pointer; /* Cambiamos el cursor al pasar el mouse */
+}
+
+    /* Estilo para eliminar el subrayado del enlace */
+    .btn-custom:hover {
+        text-decoration: none;
+    }
+
